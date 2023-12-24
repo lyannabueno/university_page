@@ -1,0 +1,349 @@
+@breakPointMobile: ~"(max-width: 767px)";
+@breakPointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+@breakPointPc: ~"(min-width: 1024px)";
+
+#colors() {
+    primaryColor: rgb(238, 235, 235);
+    secundaryColor: rgb(120, 212, 120);
+    socialLinksColor: grey;
+}
+
+.socialLinkSameLi {
+    .bi {
+        color: #colors[socialLinksColor];
+    }
+
+    .bi-instagram, .bi-facebook {
+        font-size: 35px;
+    }
+
+    .bi-youtube {
+        font-size: 45px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+header {
+    padding: 30px 0 15px 0;
+
+    .container {
+        .d-flex {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h5 {
+            font-weight: 300;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 45px;
+            margin: 0 0 0 10px;
+        }
+
+        img {
+            width: 80px;
+            height: 55px;
+            object-fit: cover;
+        }
+
+        button {
+            font-size: 18px;
+            font-weight: 500;
+            width: 129px;
+            cursor: pointer;
+        }
+    }
+
+    .social-links {
+        cursor: pointer;
+        
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            height: 50px;
+
+            li {
+                list-style: none;
+                .socialLinkSameLi();
+            }
+        }
+    }
+}
+
+main {
+    img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #about-courses {
+        padding: 70px 0;
+        h2 {
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .d-lg-flex {
+            justify-content: space-evenly;
+        }
+
+        h3 {
+            text-align: center;
+            width: 350px;
+            border-radius: 5px;
+            border: 2px solid #colors[secundaryColor];
+
+            @media @breakPointTablet {
+                width: 300px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transition: background-color 0.7s ease;
+                background-color: #colors[secundaryColor];
+            }
+        }
+    }
+
+    #about-ubct {
+        background-color: #colors[primaryColor];
+
+        @media @breakPointMobile {
+            padding-top: 40px;
+        }
+
+        @media @breakPointTablet, @breakPointPc {
+            padding: 40px 0;
+        }
+
+
+        h2 {
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 0;
+            column-gap: 50px;
+
+            li {
+                list-style: none;
+                text-align: center;
+
+                @media @breakPointMobile {
+                    padding-bottom: 25px;
+                }
+
+                i {
+                    font-size: 50px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    #talking-about-ubct {
+        padding: 70px 0;
+
+        .text-container {
+
+            h2 {
+                padding-bottom: 50px;
+                text-align: center;
+            }
+
+            .text {
+                display: none; // some com todos os textos
+                text-align: center;
+
+                img {
+                    width: 96px;
+                    height: 96px;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                    object-fit: cover;
+                }
+
+                h6 {
+                    font-weight: 400;
+                }
+
+                h5 {
+                    font-size: 16px;
+                }
+            }
+
+            #text-1 {
+                display: block; // deixa apenas o 1º texto visível
+            }
+        }
+    }
+
+    #infraestrutura {
+        background-color: #colors[primaryColor];
+
+        @media @breakPointMobile, @breakPointTablet {
+            padding-top: 50px;
+        }
+
+        @media @breakPointPc {
+            padding: 50px 0 60px 0;
+        }
+
+        h2 {
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 0;
+            justify-content: space-between;
+            margin-bottom: 0;
+
+            li {
+                list-style: none;
+                text-align: center;
+
+                @media @breakPointMobile, @breakPointTablet {
+                    padding-bottom: 50px;
+                }
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 3px;
+                    object-fit: cover;
+                }
+
+                h5 {
+                    margin: 10px 0;
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                p {
+                    margin-bottom: 0;
+
+                    @media @breakPointMobile {
+                        text-align: center;
+                    }
+
+                    @media @breakPointPc {
+                        width: 215px;
+                    }
+                }
+            }
+        }
+    }
+
+    #footer {
+        padding: 70px 0 0 0;
+
+        .d-flex {
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 80px;
+                height: 55px;
+                object-fit: cover;
+            }
+
+            h3 {
+                font-weight: 400;
+                margin: 0 0 30px 10px;
+
+                @media @breakPointMobile {
+                    margin: 0 0 0 24px;
+                }
+            }
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                list-style: none;
+            }
+        }
+
+        .social-links {
+            cursor: pointer;
+            
+            ul {
+                display: flex;
+                margin-bottom: 30px;
+                align-items: center;
+                height: 50px;
+
+                @media @breakPointMobile {
+                    margin-top: 25px;
+                }
+
+                li {
+                    .socialLinkSameLi();
+                }
+
+            }
+        }
+
+        ul {
+            margin-bottom: 0;
+        }
+
+        .courses {
+            justify-content: space-evenly;
+
+            li {
+                @media @breakPointTablet, @breakPointPc {
+                    width: 129px;
+                    margin-bottom: 70px;
+                }
+
+                h5 {
+                    @media @breakPointMobile {
+                        margin-top: 70px;
+                    }
+                }
+
+                h6 {
+                    margin-bottom: 18px;
+                    font-weight: 400;
+
+                    &:hover {
+                        color: rgb(29, 146, 29);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #colors[primaryColor];
+    p {
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 0;
+    }
+}
