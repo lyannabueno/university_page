@@ -116,5 +116,5 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['replace:dev', 'copy', 'imagemin', 'less:production', 'htmlmin:dist', 'uglify', 'clean']);
+    grunt.registerTask('build', ['replace:dist', 'copy', 'imagemin', 'less:production', 'htmlmin:dist', 'uglify', 'clean']);
 }
