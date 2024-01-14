@@ -4,14 +4,15 @@ $(document).ready(function() {
     const displayTime = 5000;
 
     function showNextText() {
-        // Oculta o texto atual
-        document.getElementById(`text-${currentText}`).style.display = 'none';
+        // Oculta o texto atual com transição
+        $(`#text-${currentText}`).fadeOut('slow', function() {
 
-        // Atualiza para o próximo texto
-        currentText = currentText % totalTexts + 1;
+            // Atualiza para o próximo texto
+            currentText = currentText % totalTexts + 1;
 
-        // Mostra o próximo texto
-        document.getElementById(`text-${currentText}`).style.display = 'block';
+            // Mostra o próximo texto com transição
+            $(`#text-${currentText}`).fadeIn('slow');
+        });
     }
 
     // Define um intervalo para alternar os textos
