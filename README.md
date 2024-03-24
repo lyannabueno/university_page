@@ -11,7 +11,7 @@ Este projeto é um site dedicado à Universidade Brasileira de Ciência e Tecnol
 ## Tecnologias Utilizadas 📚
 
 - **HTML5:** Estrutura da página web.
-- **CSS3:** Estilização da interface do usuário.
+- **LESS:** Pré-processador CSS que permite uma escrita de estilos mais dinâmica e organizada
 - **JavaScript:** Interações dinâmicas na página, melhorando a usabilidade e a interação do usuário.
 - **jQuery 3.7.1:** Utilizado para simplificar o JavaScript, como na validação de formulários e manipulação do DOM para uma experiência de usuário mais interativa.
 - **jQuery Validate 1.19.5:** Garante que os dados inseridos no campo de formulário sejam válidos e completos, com regras específicas para cada campo
